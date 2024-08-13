@@ -14,12 +14,13 @@ ARP_depletion= {{ARP_depletion}}
 
 if CE != 15:
    phi0= 0.8
-   
+
+
 def FindAngle(pix, pop_com): #BOTH NP ARRAYS
+    # Get angle (greater than 0) in radians between pix and pop_com
     vec_to_pix = pix - pop_com
     angle_raw = np.arctan2(vec_to_pix[1], vec_to_pix[0])
     angle_raw = angle_raw + (angle_raw < 0)*(2*3.14) # CONVERT TO 0-2PI
-    
     return angle_raw
 
 def FindAlpha(angle360, cell_angle_list, alpha_list):
