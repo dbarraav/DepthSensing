@@ -1,7 +1,6 @@
 <CompuCell3D Revision="2" Version="4.2.5">
    
    <Metadata>
-       
       <!-- Basic properties simulation -->
       <NumberOfProcessors>1</NumberOfProcessors>
       <DebugOutputFrequency>100</DebugOutputFrequency>
@@ -9,7 +8,6 @@
    </Metadata>
    
    <Potts>
-      
       <!-- Basic properties of CPM (GGH) algorithm -->
       <Dimensions x="400" y="400" z="1"/>
       <Steps>4001</Steps>
@@ -18,7 +16,6 @@
    </Potts>
    
    <Plugin Name="CellType">
-      
       <!-- Listing all cell types in the simulation -->
       <CellType TypeId="0" TypeName="Medium"/>
       <CellType TypeId="1" TypeName="CELL"/>
@@ -33,17 +30,14 @@
    </Plugin>
    
    <Plugin Name="ExternalPotential">
-      
       <Algorithm>PixelBased</Algorithm>
    </Plugin>
    
    <Plugin Name="CenterOfMass">
-      
       <!-- Module tracking center of mass of each cell -->
    </Plugin>
    
    <Plugin Name="NeighborTracker">
-      
       <!-- Module tracking neighboring cells of each cell -->
    </Plugin>
    
@@ -62,7 +56,6 @@
 </Plugin>
       
    <Steppable Type="ReactionDiffusionSolverFE">
-
       <DiffusionField Name="phi_field">
          <DiffusionData>
             <FieldName>phi_field</FieldName>
@@ -139,7 +132,6 @@
             </Plane>
          </BoundaryConditions>
       </DiffusionField>      
-
    </Steppable>
 
 <Steppable Type="BlobInitializer">
